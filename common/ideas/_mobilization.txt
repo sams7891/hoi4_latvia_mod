@@ -1,0 +1,33 @@
+ideas = {
+    mobilization_laws = {
+        law = yes
+        use_list_view = yes
+
+        no_exceptions = {
+            cost = 300
+            removal_cost = -1
+            picture = RAJ_headhunt_army_personell
+            level = 1
+
+            available = {
+                has_war = yes
+                enemies_strength_ratio > 1
+                surrender_progress > 0.5
+                
+            }
+
+            modifier = {
+                conscription = 0.5
+                industrial_capacity_dockyard = -0.8
+                industrial_capacity_factory = -0.6
+                production_speed_buildings_factor = -0.6
+                training_time_factor = 0.6
+                mobilization_speed = 1.0
+            }
+            cancel_if_invalid = no
+        }
+        
+    }
+    
+    
+}

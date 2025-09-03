@@ -1,0 +1,79 @@
+﻿capital = 808
+
+recruit_character = LAT_edgars_rinkevics
+recruit_character = LAT_viktors_valainins
+recruit_character = LAT_gunars_ansins
+
+
+add_ideas = {
+	LAT_rail_baltic_construction
+	LAT_viktors_valainins
+	LAT_corruption
+}
+
+add_political_power = 100
+add_command_power = 25
+
+
+
+oob = "LAT_1939"
+
+
+set_technology = {	
+	tech_engineers = 1
+	interwar_artillery = 1
+	interwar_antiair = 1
+	support_weapons = 1
+
+	#doctrines
+	air_superiority = 1
+	grand_battle_plan = 1
+	trench_warfare = 1
+	fleet_in_being = 1
+	battlefleet_concentration = 1
+	convoy_sailing = 1
+
+	#electronics
+	electronic_mechanical_engineering = 1
+	radio = 1
+	mechanical_computing = 1
+	computing_machine = 1
+
+	#industry
+	basic_machine_tools = 1
+	improved_machine_tools = 1
+	advanced_machine_tools = 1
+	synth_oil_experiments = 1
+	fuel_silos = 1
+	oil_processing = 1
+	improved_oil_processing = 1
+	construction1 = 1
+	construction2 = 1
+	dispersed_industry = 1
+	dispersed_industry2 = 1
+}
+
+complete_special_project = {
+	project = sp:sp_air_radar
+}
+
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "2022.9.1"
+	election_frequency = 26
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 70
+	fascism = 15
+	communism = 5
+	neutrality = 5
+	authoritarianism = 5
+}
+set_party_name = {
+	ideology = democratic
+	long_name = "Jaunā apvienība - ZZS - Progrsīvie"
+	name = "Koalīcija"
+}
+

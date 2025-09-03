@@ -1,0 +1,17 @@
+rail_baltic = {
+    visible = {
+        has_completed_focus = LAT_focus_rail_baltic_2.2
+    }
+}
+
+rail_latvia = {
+    visible = {
+        has_completed_focus = LAT_focus_rail_latvia
+    }
+}
+
+anti_corruption = {
+    visible = {
+        has_completed_focus = LAT_focus_karins_anti_corruption_1
+    }
+}

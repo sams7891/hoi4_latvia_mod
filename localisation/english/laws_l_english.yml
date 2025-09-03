@@ -1,0 +1,47 @@
+﻿l_english:
+  no_exceptions: "No exceptions"
+  no_exceptions_desc: "If you can shoot your in the army"
+
+  society: "Society"
+  press_law:0 "Press Laws"
+
+  # Law Levels
+  free_press:0 "Free Press"
+  free_press_desc:0 "Freedom of the press is fully protected. Media outlets operate independently and can openly criticize the government. While this supports transparency and democracy, it also leaves the country vulnerable to foreign influence."
+
+  lightly_regulated_press:0 "Lightly Regulated Press"
+  lightly_regulated_press_desc:0 "Some regulatory oversight exists, but the press is largely free. While it supports democratic values, certain controls exist to maintain social stability."
+
+  regulated_press:0 "Regulated Press"
+  regulated_press_desc:0 "The media is tightly monitored and subject to government regulations. Criticism is limited, and the government can influence narratives to control public opinion and justify policies."
+
+  total_press_control:0 "Total Press Control"
+  total_press_control_desc:0 "All media is state-owned or strictly censored. The government controls all information flow, suppresses dissent, and uses propaganda to maintain support and suppress foreign influence."
+
+  education_law:0 "Education Budget"
+
+  education_no:0 "No Education Funding"
+  education_no_desc:0 "All funding for education has been suspended. While this frees up political capital for other priorities, it severely hampers technological development and weakens ideological cohesion."
+
+  education_minimal:0 "Minimal Education Funding"
+  education_minimal_desc:0 "Only a limited budget is allocated to education, sufficient to maintain basic literacy and institutional presence. A frugal policy that offers moderate political flexibility at the expense of long-term progress."
+
+  education_medium:0 "Standard Education Funding"
+  education_medium_desc:0 "A balanced approach to education funding ensures a capable workforce and supports ongoing research. While it requires moderate investment, the benefits to national development are tangible."
+
+  education_high:0 "Extensive Education Funding"
+  education_high_desc:0 "Significant national resources are dedicated to the education system, fostering innovation and strengthening ideological alignment. Though politically costly, the long-term strategic advantage is considerable."
+
+  health_law:0 "Public Health Policy"
+
+  no_public_health:0 "No Public Health System"
+  no_public_health_desc:0 "The state provides no organized healthcare. Citizens rely entirely on private arrangements, resulting in reduced stability and a less fit population."
+
+  minimal_health_care:0 "Minimal Health Care"
+  minimal_health_care_desc:0 "Basic emergency medical services are available to the public, but comprehensive care remains inaccessible for much of the population."
+
+  regulated_health_care:0 "Regulated Health Care"
+  regulated_health_care_desc:0 "The government supports and oversees a public health system. While not universal, the population benefits from improved services and a healthier workforce."
+
+  full_health_care:0 "Universal Health Coverage"
+  full_health_care_desc:0 "A fully state-funded healthcare system provides access to medical services for all citizens. Though resource-intensive, it significantly boosts societal resilience and long-term manpower potential."

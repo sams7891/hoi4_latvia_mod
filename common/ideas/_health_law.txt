@@ -1,0 +1,129 @@
+ideas = {
+    health_law = {
+        law = yes
+        use_list_view = yes
+
+        no_public_health = {
+            level = 4
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.1
+                recruitable_population_factor = -0.01
+                monthly_population = -0.2
+                recruitable_population = -1.0
+                war_support_factor = -0.2
+                political_power_factor = 0.5
+                conscription = -0.01
+                stability_weekly = -0.05
+            }
+
+            on_add = {
+                add_timed_idea = {
+                    idea = law_change
+                    days = 60
+                }
+            }
+
+            available = {
+                NOT = { has_idea = law_change }
+                OR = {
+                    has_idea = minimal_health_care
+                    has_idea = no_public_health
+                }
+            }
+        }
+
+        minimal_health_care = {
+            default = yes
+            level = 3
+            removal_cost = -1
+
+            modifier = {
+                recruitable_population_factor = -0.05
+                political_power_factor = 0.25
+            }
+
+            on_add = {
+                add_timed_idea = {
+                    idea = law_change
+                    days = 60
+                }
+            }
+
+            available = {
+                NOT = { has_idea = law_change }
+                OR = {
+                    has_idea = no_public_health
+                    has_idea = regulated_health_care
+                    has_idea = minimal_health_care
+                }
+            }
+        }
+
+        regulated_health_care = {
+            level = 2
+            removal_cost = -1
+            default = yes
+
+            modifier = {
+                stability_factor = 0.05
+                recruitable_population_factor = 0.02
+                recruitable_population = 0.01
+                monthly_population = 0.5
+                war_support_factor = 0.05
+                political_power_factor = -0.25
+                political_power_gain = -0.25
+                conscription = 0.01
+            }
+
+            on_add = {
+                add_timed_idea = {
+                    idea = law_change
+                    days = 60
+                }
+            }
+
+            available = {
+                NOT = { has_idea = law_change }
+                OR = {
+                    has_idea = minimal_health_care
+                    has_idea = full_health_care
+                    has_idea = regulated_health_care
+                }
+            }
+        }
+
+        full_health_care = {
+            level = 1
+            cost = 100
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = 0.15
+                recruitable_population_factor = 0.15
+                monthly_population = 1
+                war_support_factor = 0.05
+                political_power_factor = -0.4
+                political_power_gain = -0.5
+                consumer_goods_factor = 0.1
+                conscription = 0.02
+            }
+
+            on_add = {
+                add_timed_idea = {
+                    idea = law_change
+                    days = 60
+                }
+            }
+
+            available = {
+                NOT = { has_idea = law_change }
+                OR = {
+                    has_idea = regulated_health_care
+                    has_idea = full_health_care
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,152 @@
+ideas = {
+    press_law = {
+        law = yes
+        use_list_view = yes
+        
+        free_press = {
+            level = 4
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = 0.1
+                foreign_subversive_activites = 0.25
+                democratic_drift = 0.05
+                civilian_intel_factor = 0.5
+                trade_opinion_factor = 0.25
+                drift_defence_factor = -0.1
+                justify_war_goal_time = 0.25
+            }
+
+            on_add = {
+                add_timed_idea = {
+                    idea = law_change
+                    days = 60
+                }
+                
+            }
+
+            available = {
+                OR = {
+                    has_government = democratic
+                    has_government = neutrality
+                }
+                NOT = {
+                    has_idea = law_change
+                }
+                OR = {
+                    has_idea = lightly_regulated_press
+                    has_idea = free_press
+                }
+                
+            }
+        }
+
+        lightly_regulated_press = {
+            default = yes
+            level = 3
+            removal_cost = -1
+            
+            modifier = {
+                stability_factor = 0.05
+                foreign_subversive_activites = 0.15
+                democratic_drift = 0.01
+                civilian_intel_factor = 0.25
+                trade_opinion_factor = 0.20
+                justify_war_goal_time = 0.1
+            }
+            
+            available = {
+                NOT = {
+                    has_idea = law_change
+                }
+                OR = {
+                    has_idea = free_press
+                    has_idea = regulated_press
+                    has_idea = lightly_regulated_press
+                }
+            }
+
+            on_add = {
+                add_timed_idea = {
+                    idea = law_change
+                    days = 60
+                }
+                
+            }
+
+        }
+
+        regulated_press = {
+            level = 2
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = 0.05
+                civilian_intel_factor = 0.1
+                war_support_factor = 0.05
+                drift_defence_factor = 0.5
+                political_power_factor = -0.05
+            }
+            
+            available = {
+                NOT = {
+                    has_idea = law_change
+                }
+                OR = {
+                    has_idea = lightly_regulated_press
+                    has_idea = total_press_control
+                    has_idea = regulated_press
+                }
+            }
+
+            on_add = {
+                add_timed_idea = {
+                    idea = law_change
+                    days = 60
+                }
+                
+            }
+
+
+        }
+
+        total_press_control = {
+            level = 1
+            cost = 100
+            removal_cost = -1
+            
+            modifier = {
+                stability_factor = 0.1
+                foreign_subversive_activites = -0.10
+                trade_opinion_factor = -0.1
+                political_power_factor = -0.1
+                drift_defence_factor = 1
+                war_support_factor = 0.1
+                war_support_weekly = 0.03
+                justify_war_goal_time = -0.25
+            }
+
+            available = {
+                OR = {
+                    has_government = fascism
+                    has_government = authoritarianism
+                    has_government = communism
+                }
+                NOT = {
+                    has_idea = law_change
+                }
+                OR = {
+                    has_idea = regulated_press
+                    has_idea = total_press_control
+                }
+            }
+            on_add = {
+                add_timed_idea = {
+                    idea = law_change
+                    days = 60
+                }
+                
+            }
+        }
+    }    
+}

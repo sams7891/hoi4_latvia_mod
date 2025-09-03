@@ -1,0 +1,10 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_portrait_edgars_rinkevics"
+        textureFile = "gfx/leaders/LAT/LAT_edgars_rinkevics.dds"
+    }
+
+    spriteType = {
+        name = GFX_portrait_viktors_valmanis
+    }
+}

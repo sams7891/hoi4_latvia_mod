@@ -1,0 +1,44 @@
+add_namespace = latvia_events
+
+country_event = {
+    #choosing a new economics minister
+    id = latvia_events.1
+    title = latvia_events.1.t
+    desc = latvia_events.1.d
+    picture = GFX_report_event_generic_read_write
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    option = {
+        name = latvia_events.1.a
+        complete_national_focus = LAT_focus_liepaja_SEZ_1
+    }
+    option = {
+        name = latvia_events.1.b
+        complete_national_focus = LAT_focus_karins
+    }
+    option = {
+        name = latvia_events.1.c
+        complete_national_focus = LAT_focus_swedbank
+    }
+}
+
+country_event = {
+    #president assasination attempt
+    id = latvia_events.2
+    title = latvia_events.2.t
+    desc = latvia_events.2.d
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    option = {
+        name = latvia_events.2.a
+        set_country_flag = assasination_attempt_survived
+        mark_focus_tree_layout_dirty = yes
+        complete_national_focus = LAT_focus_emergency_1
+    }
+}

@@ -1,0 +1,77 @@
+ideas = {
+    country = {
+
+        LAT_rail_baltic_construction = {
+            picture = ARG_invest_in_railways
+            allowed = {
+                original_tag = LAT
+            }
+
+            modifier = {
+                political_power_factor = -0.25
+                consumer_goods_expected_value = 0.25
+            }
+        }
+
+        LAT_canceled_rail_balic = {
+            picture = HABSBURG_economy
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                political_power_factor = 1
+                consumer_goods_factor = -0.5
+                stability_weekly = 0.4
+            }
+        }
+
+        LAT_rail_infrastructure = {
+            picture = ARG_invest_in_railways
+            allowed = {
+                always = yes
+            }
+
+            modifier = {
+                political_power_gain = 0.25
+                consumer_goods_factor = -0.1
+                supply_combat_penalties_on_core_factor = -0.5
+                cic_construction_boost = 0.1
+            }
+        }
+
+        LAT_liepaja_SEZ = {
+            picture = RAJ_special_economic_zones
+            allowed = {
+                always = yes
+            }
+
+            modifier = {
+                political_power_factor = 0.5
+                consumer_goods = -0.25
+                cic_construction_boost = 0.1
+            }
+        }
+
+        LAT_corruption = {
+            picture = EST_democratic_opposition
+            allowed = {
+                always = yes
+            }
+
+            modifier = {
+                political_power_factor = -0.75
+                consumer_goods_factor = 0.1
+            }
+        }
+
+        LAT_secret_plot = {
+            allowed = {
+                always = yes
+            }
+
+            on_remove = {
+                country_event = latvia_events.2
+            }
+        }
+    }
+}

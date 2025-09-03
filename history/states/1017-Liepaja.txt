@@ -1,0 +1,29 @@
+state={
+	id=1017
+	name="STATE_1017"
+
+	history={
+
+		victory_points = {
+			9262 1 #Ventspils
+		}
+		owner = LAT
+		buildings = {
+			infrastructure = 3 #was: 5
+			9262 = {
+				naval_base = 1
+			}
+			dockyard = 1
+		}
+		add_core_of = LAT
+		add_core_of = LIE
+	}
+
+	provinces={
+		9262 
+	}
+	local_supplies=5.0 
+	manpower=60500
+	buildings_max_level_factor=1.000
+	state_category=city
+}

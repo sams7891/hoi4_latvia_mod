@@ -1,0 +1,38 @@
+ideas = {
+    hidden_ideas = {
+        law_change = {
+            allowed = {
+                always = yes
+            }
+        }
+    }
+
+    country = {
+        taken_loans = {
+
+            picture = NOR_printing_money
+            available = {
+                always = yes
+            }
+
+            modifier = {
+                consumer_goods_factor = 1
+            }
+        }
+    }
+
+    country = {
+        economic_restructure = {
+            picture = PER_fund_state_intelligence_idea
+
+            available = {
+                always = yes
+            }
+
+            modifier = {
+                political_power_gain = -0.5
+                stability_weekly = -0.02
+            }
+        }
+    }
+}

@@ -1,0 +1,592 @@
+focus_tree = {
+    id = LAT_focus
+    country = { 
+        base = 0
+        modifier = {
+            add = 10
+            tag = LAT
+        }
+    }
+    continuous_focus_position = {
+        x = 100
+        y = 1500
+    }
+    
+    #/////////////////////
+    #Rail Baltic tree
+    #/////////////////////
+    focus = {
+        id = LAT_focus_rail_baltic_1
+        icon = GFX_focus_generic_railroad
+        cost = 3
+        
+        x = 2
+        y = 0
+        
+        completion_reward = { add_political_power = 25 }
+    }
+
+    focus = {
+        id = LAT_focus_rail_baltic_2.1
+        icon = GFX_focus_generic_monetary_union
+        cost = 2
+        
+        relative_position_id = LAT_focus_rail_baltic_1
+        x = -1
+        y = 1
+
+        prerequisite = {
+            focus = LAT_focus_rail_baltic_1
+        }
+        mutually_exclusive = {
+            focus = LAT_focus_rail_baltic_2.2
+        }
+        completion_reward = { 
+            add_timed_idea = {
+                idea = LAT_canceled_rail_balic
+                days = 120
+            }
+            remove_ideas = LAT_rail_baltic_construction
+        }
+    }
+
+    focus = {
+        id = LAT_focus_rail_baltic_2.2
+        icon = GFX_goal_generic_construct_infrastructure
+        cost = 3
+        
+        relative_position_id = LAT_focus_rail_baltic_1
+        x = 1
+        y = 1
+
+        prerequisite = {
+            focus = LAT_focus_rail_baltic_1
+        }
+        mutually_exclusive = {
+            focus = LAT_focus_rail_baltic_2.1
+        }
+        completion_reward = { 
+            #building railbaltic Latvia
+            unlock_decision_category_tooltip = rail_baltic
+        }
+    }
+
+    focus = {
+        id = LAT_focus_rail_baltic_3.1
+        icon = GFX_focus_generic_the_council_of_europe
+        cost = 10
+
+        relative_position_id = LAT_focus_rail_baltic_2.2
+        x = -1
+        y = 1
+
+        prerequisite = {
+            focus = LAT_focus_rail_baltic_2.2
+        }
+        available = {
+            NOT = {
+                has_completed_focus = LAT_focus_rail_baltic_3.2
+            }
+        }
+
+        completion_reward = { add_political_power = 200 }
+    }
+
+    focus = {
+        id = LAT_focus_rail_baltic_3.2
+        icon = GFX_goal_generic_construct_infrastructure
+        cost = 1
+        
+        relative_position_id = LAT_focus_rail_baltic_2.2
+        x = 0
+        y = 2
+
+        prerequisite = {
+           focus = LAT_focus_rail_baltic_2.2
+        }
+        prerequisite = {
+            focus = LAT_focus_hire_new_economic_minister
+        }
+
+        available = {
+            AND = {
+                has_country_flag = completed_estonia_border_infrastracture
+                has_country_flag = completed_lithuania_border_infrastructure
+                has_country_flag = completed_from_estonia_rail
+                has_country_flag = completed_from_lithuania
+                has_country_flag = completed_riga_rail
+            }
+        }
+        completion_reward = { 
+            remove_ideas = LAT_rail_baltic_construction
+            add_ideas = LAT_rail_infrastructure
+        }
+    }
+
+    focus = {
+        id = LAT_focus_rail_baltic_3.3
+        icon = GFX_focus_PER_national_bank
+        cost = 5
+        
+        relative_position_id = LAT_focus_rail_baltic_2.2
+        x = 1
+        y = 1
+
+        prerequisite = {
+            focus = LAT_focus_rail_baltic_2.2
+        }
+        
+        available = {
+            NOT = {
+                has_completed_focus = LAT_focus_rail_baltic_3.2
+            }
+        }
+        
+        completion_reward = {
+            add_political_power = 150
+            add_timed_idea = {
+                idea = taken_loans
+                days = 90
+            }
+        }
+    }
+#Rail latvia
+    focus = {
+        id = LAT_focus_rail_latvia
+        icon = GFX_goal_reichsautobahn
+        cost = 2
+
+        relative_position_id = LAT_focus_rail_baltic_3.2
+        x = 0
+        y = 1
+
+        prerequisite = {
+            focus = LAT_focus_rail_baltic_3.2
+        }
+        prerequisite = {
+            focus = LAT_focus_hire_new_economic_minister
+        }
+        completion_reward = { 
+            unlock_decision_category_tooltip = rail_latvia
+        }
+    }
+    #/////////////////////
+    #main tree
+    #/////////////////////
+    focus = {
+        id = LAT_focus_adress_economics
+        icon = GFX_focus_generic_currency_reforms
+        cost = 1
+        x = 9
+        y = 0
+        completion_reward = {
+            add_ideas = economic_restructure
+        }
+    }
+
+    focus = {
+        id = LAT_focus_fire_economic_minister
+        icon = GFX_focus_POL_complete_april_constitution
+        cost = 2
+
+        relative_position_id = LAT_focus_adress_economics
+        x = -1
+        y = 1
+
+        prerequisite = {
+            focus = LAT_focus_adress_economics
+        }
+        completion_reward = {
+            #remove the starting economics minister
+            remove_ideas = LAT_viktors_valainins
+        }
+    }
+
+    focus = {
+        id = LAT_focus_ban_russian_in_work
+        icon = GFX_focus_BRA_ban_communist_party
+        cost = 4
+
+        relative_position_id = LAT_focus_adress_economics
+        x = 1
+        y = 1
+
+        prerequisite = {
+            focus = LAT_focus_adress_economics
+        }
+        completion_reward = { 
+            #bans russian in workplaces
+            #when great financial collapes happens increse the power of the russian rebels
+        }
+    }
+
+    focus = {
+        id = LAT_focus_hire_new_economic_minister
+        icon = GFX_focus_generic_infiltration
+        cost = 1
+
+        relative_position_id = LAT_focus_fire_economic_minister
+        x = 0
+        y = 1
+
+        prerequisite = {
+            focus = LAT_focus_fire_economic_minister
+        }
+        completion_reward = { 
+            add_political_power = 50
+            country_event = latvia_events.1
+        }
+    }
+    #Liepaja tree
+    focus = {
+        id = LAT_focus_liepaja_SEZ_1
+        icon = GFX_focus_generic_baltic_sea_fleet
+        cost = 3
+
+        relative_position_id = LAT_focus_hire_new_economic_minister
+        x = -2
+        y = 1
+
+        prerequisite = {
+            focus = LAT_focus_hire_new_economic_minister
+        }
+
+        mutually_exclusive = {
+            focus = LAT_focus_karins
+            focus = LAT_focus_swedbank
+        }
+        available = {
+            always = no
+        }
+        completion_reward = { 
+            add_ideas = LAT_gunars_ansins
+        }
+    }
+
+    focus = {
+        id = LAT_focus_karins
+        icon = GFX_focus_generic_printing_press
+        cost = 3
+
+        relative_position_id = LAT_focus_hire_new_economic_minister
+        x = 0
+        y = 1
+
+        prerequisite = {
+            focus = LAT_focus_hire_new_economic_minister
+        }
+        mutually_exclusive = {
+            focus = LAT_focus_liepaja_SEZ_1
+            focus = LAT_focus_swedbank
+
+        }
+        available = {
+            always = no
+        }
+        completion_reward = { }
+    }
+
+    focus = {
+        id = LAT_focus_swedbank
+        icon = GFX_focus_generic_currency_reforms
+        cost = 3
+
+        relative_position_id = LAT_focus_hire_new_economic_minister
+        x = 2
+        y = 1
+
+        prerequisite = {
+            focus = LAT_focus_hire_new_economic_minister
+        }
+        mutually_exclusive = {
+            focus = LAT_focus_liepaja_SEZ_1
+            focus = LAT_focus_karins
+        }
+        available = {
+            always = no
+        }
+        completion_reward = { }
+    }
+
+    #/////////////////////
+    #Liepaja path
+    #/////////////////////
+
+    focus = {
+        id = LAT_focus_liepaja_SEZ_2
+        icon = GFX_focus_generic_befriend_denmark
+        cost = 4
+
+        relative_position_id = LAT_focus_liepaja_SEZ_1
+        x = -1
+        y = 1
+
+        prerequisite = {
+            focus = LAT_focus_liepaja_SEZ_1
+        }
+        completion_reward = { 
+            1017 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    focus = {
+        id = LAT_focus_liepaja_SEZ_3
+        icon = GFX_goal_generic_positive_trade_relations
+        cost = 2
+
+        relative_position_id = LAT_focus_liepaja_SEZ_2
+        x = 0
+        y = 1
+        prerequisite = {
+            focus = LAT_focus_liepaja_SEZ_2
+        }
+        completion_reward = { 
+            1017 = {
+                set_demilitarized_zone = yes
+            }
+            add_ideas = LAT_liepaja_SEZ
+        }
+    }
+
+    focus = {
+        id = LAT_focus_liepaja_SEZ_4
+        icon = GFX_focus_GER_integrated_economies
+        cost = 6
+
+        relative_position_id = LAT_focus_liepaja_SEZ_3
+        x = 1
+        y = 1
+
+        prerequisite = {
+            focus = LAT_focus_liepaja_SEZ_3
+        }
+        completion_reward = { 
+            1017 = {
+                
+                transfer_state_to = LIE
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+                add_extra_state_shared_building_slots = 4
+            }
+            puppet = {
+                target = LIE
+            } 
+            
+            LIE = {
+                load_oob = "LIE_SEZ"
+                add_ideas = {
+                    special_economic_zones
+                    disarmed_nation
+                    LAT_liepaja_SEZ
+                }
+            }
+        }
+    }
+
+
+    #/////////////////////
+    #middle path
+    #/////////////////////
+
+    focus = {
+        #establish anti - corruption special task force
+        #After 10 days when the investigate banks decision has been completed launch an assasination attempt on the president
+        #unlocking the presidents emergency power focus tree
+        id = LAT_focus_karins_anti_corruption_1
+        icon = GFX_focus_FIN_union_of_finnish_borthers_in_arms
+        cost = 3
+
+        relative_position_id = LAT_focus_karins
+        x = 0
+        y = 1
+
+        prerequisite = {
+            focus = LAT_focus_liepaja_SEZ_1
+            focus = LAT_focus_karins
+            focus = LAT_focus_swedbank
+        }        
+        completion_reward = { 
+            unlock_decision_category_tooltip = anti_corruption
+        }
+    }
+
+    focus = {
+        id = LAT_focus_karins_anti_corruption_2
+        icon = GFX_focus_SWE_bofors_fly_swatter
+        cost = 2
+
+        relative_position_id = LAT_focus_karins_anti_corruption_1
+        x = 0
+        y = 1
+
+        prerequisite = {
+            focus = LAT_focus_karins_anti_corruption_1
+        }
+        completion_reward = { 
+            add_country_leader_trait = economic_reformer
+        }
+    }
+
+    focus = {
+        id = LAT_focus_karins_anti_corruption_3
+        icon = GFX_focus_SWE_rations
+        cost = 4
+
+        relative_position_id = LAT_focus_karins_anti_corruption_2
+        x = 0
+        y = 1
+
+        prerequisite = {
+            focus = LAT_focus_karins_anti_corruption_2
+        }
+        available = {
+            has_country_flag = completed_anti_corruption_banks
+        }
+        completion_reward = { 
+            remove_ideas = LAT_corruption
+        }
+    }
+
+
+    #/////////////////////
+    #swedbank path
+    #/////////////////////
+
+    focus = {
+        id = LAT_focus_swedbank_1
+        icon = GFX_portrait_viktors_valmanis
+        cost = x
+
+        relative_position_id = LAT_focus_swedbank
+        x = 1
+        y = 1
+        completion_reward = { }
+    }
+
+    focus = {
+        id = LAT_focus_swedbank_2
+        icon = GFX_portrait_viktors_valmanis
+        cost = x
+
+        relative_position_id = LAT_focus_swedbank_1
+        x = 0
+        y = 1
+        completion_reward = { }
+    }
+
+    focus = {
+        id = LAT_focus_swedbank_3
+        icon = GFX_portrait_viktors_valmanis
+        cost = x
+
+        relative_position_id = LAT_focus_swedbank_2
+        x = -1
+        y = 1
+        completion_reward = { }
+    }
+
+    #/////////////////////
+    #after main branch completion
+    #/////////////////////
+
+    focus = {
+        id = LAT_focus_a_new_era
+        icon = GFX_focus_LAT_lightning_strike
+        
+        relative_position_id = LAT_focus_karins_anti_corruption_3
+        x = 0
+        y = 1
+
+        prerequisite = {
+            focus = LAT_focus_liepaja_SEZ_4
+            focus = LAT_focus_swedbank_3
+        }
+        prerequisite = {
+            focus = LAT_focus_karins_anti_corruption_3
+        }
+        available = {
+            always = no
+        }
+        completion_reward = { }
+    }
+
+    #/////////////////////
+    #emergency powers tree
+    #/////////////////////
+
+    focus = {
+        id = LAT_focus_emergency_1
+        icon = GFX_focus_RAJ_red_in_the_shadows
+        cost = 1
+        x = 15
+        y = 0
+        allow_branch = {
+            has_country_flag = assasination_attempt_survived
+        }
+        completion_reward = { 
+            add_political_power = 200
+            remove_ideas = law_change
+        }
+    }
+
+    focus = {
+        id = LAT_focus_emergency_2
+        icon = GFX_focus_eng_move_to_secure_the_dominions
+        cost = 2
+
+        relative_position_id = LAT_focus_emergency_1
+        x = 0
+        y = 1
+        prerequisite = {
+            focus = LAT_focus_emergency_1
+        }
+        completion_reward = { 
+            set_politics = {
+                elections_allowed = no
+            }
+        }
+    }
+
+    focus = {
+        id = LAT_focus_emergency_3
+        icon = GFX_SOV_the_last_break_southward_ccp_2d_sov_compatibility
+        cost = 2
+        
+        relative_position_id = LAT_focus_emergency_2
+        x = 0
+        y = 1
+        prerequisite = {
+            focus = LAT_focus_emergency_2
+        }
+        completion_reward = { 
+            add_manpower = -100
+            add_stability = -0.2
+        }
+    }
+
+    focus = {
+        id = LAT_focus_emergency_4
+        icon = GFX_SOV_consolidate_power_ccp_2d_sov_compatibility
+        cost = 1
+
+        relative_position_id = LAT_focus_emergency_3
+        x = 0
+        y = 1
+        prerequisite = {
+            focus = LAT_focus_emergency_3
+        }
+        completion_reward = { 
+            
+        }
+    }
+
+    
+}

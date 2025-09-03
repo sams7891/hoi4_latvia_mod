@@ -1,0 +1,19 @@
+state={
+	id=1018
+	name="STATE_1018"
+	state_category = town
+	history = {
+		owner = LAT
+		add_core_of = LAT
+		buildings = {
+			industrial_complex = 1
+			infrastructure = 2
+		}
+	}
+	provinces={
+		3255 11358 
+	}
+	manpower=25000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

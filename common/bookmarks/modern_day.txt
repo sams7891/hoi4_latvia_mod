@@ -1,0 +1,24 @@
+bookmarks = {
+	bookmark = {
+		name = "MODERN_DAY_NAME"
+		desc = "MODERN_DAY_DESC"
+		date = 2025.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "LAT"
+		default = yes
+		
+		"LAT" = {
+			ideology = democratic
+			history = LAT_desc
+		}
+		"---" = {
+			history = ""
+		}
+		
+		
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

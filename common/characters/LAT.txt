@@ -1,0 +1,47 @@
+characters = {
+    LAT_edgars_rinkevics = {
+        name = LAT_edgars_rinkevics
+        portraits = {
+            civilian = {
+                large = GFX_portrait_edgars_rinkevics
+            }
+        }
+        country_leader = {
+            ideology = liberalism
+        }
+    }
+    
+    LAT_viktors_valainins = {
+        name = LAT_viktors_valainins
+        
+        advisor = {
+            idea_token = LAT_viktors_valainins
+            slot = political_advisor
+            allowed = {
+                original_tag = LAT
+            }
+            traits = { }
+            can_be_fired = no
+        }
+}
+
+
+    LAT_gunars_ansins = {
+        name = LAT_gunars_ansins
+        advisor = {
+            idea_token = LAT_gunars_ansins
+            slot = political_advisor
+            allowed = {
+                has_completed_focus = LAT_focus_Liepaja_SEZ_1
+                original_tag = LAT
+            }
+            visible = {
+                has_completed_focus = LAT_focus_Liepaja_SEZ_1
+            }
+            traits = { 
+                economic_organizer
+            }
+            can_be_fired = no
+        }
+    }
+}

@@ -1,0 +1,123 @@
+ideas = {
+    education_law = {
+        law = yes
+        use_list_view = yes
+
+        education_no = {
+            level = 4
+            removal_cost = -1
+            
+            modifier = {
+                research_speed_factor = -0.25
+                political_power_factor = 0.5
+                stability_weekly = -0.02
+            }
+
+            on_add = {
+                add_timed_idea = {
+                    idea = law_change
+                    days = 60
+                }
+                
+            }
+
+            available = {
+                NOT = {
+                    has_idea = law_change
+                }
+                OR = {
+                    has_idea = education_no
+                    has_idea = education_minimal
+                }
+            }
+        }
+
+        education_minimal = {
+            default = yes
+            level = 3
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = 0.05
+                stability_weekly = -0.01
+            }
+
+            on_add = {
+                add_timed_idea = {
+                    idea = law_change
+                    days = 60
+                }
+                
+            }
+
+            available = {
+                NOT = {
+                    has_idea = law_change
+                }
+                OR = {
+                    has_idea = education_no
+                    has_idea = education_minimal
+                    has_idea = education_medium
+                }
+            }
+        }
+
+        education_medium = {
+            level = 2
+            removal_cost = -1
+
+            modifier = {
+                research_speed_factor = 0.05
+                political_power_factor = -0.05
+            }
+
+            on_add = {
+                add_timed_idea = {
+                    idea = law_change
+                    days = 60
+                }
+                
+            }
+
+            available = {
+                NOT = {
+                    has_idea = law_change
+                }
+                OR = {
+                    has_idea = education_minimal
+                    has_idea = education_medium
+                    has_idea = education_high
+                }
+            }
+        }
+
+        education_high = {
+            level = 1
+            cost = 100
+            removal_cost = -1
+
+            modifier = {
+                research_speed_factor = 0.15
+                political_power_factor = -0.2
+            }
+
+            on_add = {
+                add_timed_idea = {
+                    idea = law_change
+                    days = 60
+                }
+                
+            }
+
+            available = {
+                NOT = {
+                    has_idea = law_change
+                }
+                OR = {
+                    has_idea = education_medium
+                    has_idea = education_high
+                }
+            }
+        }
+    }
+}

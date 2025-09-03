@@ -64,6 +64,32 @@ ideas = {
             }
         }
 
+        LAT_riots = {
+            picture = chi_war_of_resistance3
+            allowed = {
+                always = yes
+            }
+
+            modifier = {
+                stability_weekly = -0.1
+                war_support_weekly = 0.1
+                political_power_factor = -0.5
+            }
+        }
+
+        LAT_state_of_the_army = {
+            picture = LAT_saeimas_military
+            allowed = {
+                always = yes
+            }
+
+            modifier = {
+                ground_attack_factor = -0.1
+                supply_consumption_factor = 0.1
+                army_speed_factor = -0.2
+            }
+        }
+
     }
     hidden_ideas = {
         LAT_secret_plot = {

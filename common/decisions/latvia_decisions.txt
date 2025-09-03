@@ -130,7 +130,7 @@ anti_corruption = {
     anti_corruption_banks = {
         cost = 15
         fire_only_once = yes
-        days_remove = 30
+        days_remove = 10
 
         remove_effect = {
             set_country_flag = completed_anti_corruption_banks
@@ -140,6 +140,16 @@ anti_corruption = {
                     days = 10
                 }
             }
+        }
+    }
+
+    anti_corruption_business = {
+        cost = 20
+        fire_only_once = yes
+        days_remove = 40
+
+        remove_effect = {
+            set_country_flag = completed_anti_corruption_business
         }
     }
 }

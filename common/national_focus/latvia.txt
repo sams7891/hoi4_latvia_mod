@@ -449,6 +449,7 @@ focus_tree = {
         }
         available = {
             has_country_flag = completed_anti_corruption_banks
+            has_country_flag = completed_anti_corruption_business
         }
         completion_reward = { 
             remove_ideas = LAT_corruption
@@ -544,6 +545,14 @@ focus_tree = {
         completion_reward = { 
             add_political_power = 200
             remove_ideas = law_change
+            add_popularity = {
+                ideology = authoritarianism
+                popularity = 0.1
+            }
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.1
+            }
         }
     }
 
@@ -559,7 +568,15 @@ focus_tree = {
             focus = LAT_focus_emergency_1
         }
         completion_reward = { 
-            
+            add_manpower = -100
+            add_popularity = {
+                ideology = authoritarianism
+                popularity = 0.1
+            }
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.1
+            }
         }
     }
 
@@ -575,7 +592,16 @@ focus_tree = {
             focus = LAT_focus_emergency_2
         }
         completion_reward = { 
+            load_oob = "LAT_focus_emergency_3"
             add_stability = -0.2
+            add_popularity = {
+                ideology = authoritarianism
+                popularity = 0.1
+            }
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.1
+            }
         }
     }
 
@@ -591,7 +617,14 @@ focus_tree = {
             focus = LAT_focus_emergency_3
         }
         completion_reward = { 
-            
+            add_popularity = {
+                ideology = authoritarianism
+                popularity = 0.1
+            }
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.1
+            }
         }
     }
 

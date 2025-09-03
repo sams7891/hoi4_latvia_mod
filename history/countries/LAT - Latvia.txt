@@ -9,6 +9,7 @@ add_ideas = {
 	LAT_rail_baltic_construction
 	LAT_viktors_valainins
 	LAT_corruption
+	LAT_state_of_the_army
 }
 
 add_political_power = 100

@@ -1,0 +1,61 @@
+division_template = {
+    name = "Policija"
+    is_locked = yes
+    regiments = {
+        bicycle_battalion = { x = 0 y = 0 }
+        bicycle_battalion = { x = 0 y = 1 }
+        bicycle_battalion = { x = 1 y = 0 }
+        bicycle_battalion = { x = 1 y = 1 }
+    }
+
+    support = {
+        military_police = { x = 0 y = 0 }
+    }
+}
+
+units = {
+    division = {
+        location = 9340
+        division_template = "Policija"
+        name = "Rīgas policijas bataljons"
+        start_equipment_factor = 1
+        start_experience_factor = 0.5
+        start_manpower_factor = 1
+    }
+
+    division = {
+        location = 3296
+        division_template = "Policija"
+        name = "Ventspils policijas bataljons"
+        start_equipment_factor = 1
+        start_experience_factor = 0.5
+        start_manpower_factor = 1
+    }
+
+    division = {
+        location = 6342
+        division_template = "Policija"
+        name = "Jelgavas policijas bataljons"
+        start_equipment_factor = 1
+        start_experience_factor = 0.5
+        start_manpower_factor = 1
+    }
+
+    division = {
+        location = 310
+        division_template = "Policija"
+        name = "Daugavpils policijas bataljons"
+        start_equipment_factor = 1
+        start_experience_factor = 0.5
+        start_manpower_factor = 1
+    }
+
+    division = {
+        location = 10493
+        division_template = "Policija"
+        name = "Valmieras policijas bataljons"
+        start_equipment_factor = 1
+        start_experience_factor = 0.5
+        start_manpower_factor = 1
+    }
+}

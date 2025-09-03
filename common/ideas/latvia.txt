@@ -64,7 +64,10 @@ ideas = {
             }
         }
 
+    }
+    hidden_ideas = {
         LAT_secret_plot = {
+            
             allowed = {
                 always = yes
             }

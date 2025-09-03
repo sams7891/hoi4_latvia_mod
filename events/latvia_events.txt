@@ -39,6 +39,5 @@ country_event = {
         name = latvia_events.2.a
         set_country_flag = assasination_attempt_survived
         mark_focus_tree_layout_dirty = yes
-        complete_national_focus = LAT_focus_emergency_1
     }
 }

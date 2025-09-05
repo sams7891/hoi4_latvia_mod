@@ -153,3 +153,26 @@ anti_corruption = {
         }
     }
 }
+
+debug_mode = {
+    political_power = {
+        complete_effect = {
+            add_political_power = 2000
+        }
+    }
+
+    expierience = {
+        complete_effect = {
+            army_experience = 500
+            navy_experience = 500
+            air_experience = 500
+            add_command_power = 500
+        }
+    }
+
+    manpower = {
+        complete_effect = {
+            add_manpower = 1000000
+        }
+    }
+}

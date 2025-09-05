@@ -18,3 +18,11 @@ anti_corruption = {
         has_completed_focus = LAT_focus_karins_anti_corruption_1
     }
 }
+#debug
+debug_mode = {
+    priority = 100
+    visible = {
+        #remember to change it to always no
+        always = yes
+    }
+}

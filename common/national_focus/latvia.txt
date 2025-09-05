@@ -525,7 +525,9 @@ focus_tree = {
         available = {
             always = no
         }
-        completion_reward = { }
+        completion_reward = { 
+            remove_ideas = economic_restructure
+        }
     }
 
     #/////////////////////
@@ -569,6 +571,7 @@ focus_tree = {
         }
         completion_reward = { 
             add_manpower = -100
+            army_experience = 25
             add_popularity = {
                 ideology = authoritarianism
                 popularity = 0.1
@@ -617,6 +620,12 @@ focus_tree = {
             focus = LAT_focus_emergency_3
         }
         completion_reward = { 
+            add_ideas = regulated_press
+            hidden_effect = {
+                remove_ideas = law_change
+            }
+            add_ideas = civil_rights_minimal
+            add_political_power = 50
             add_popularity = {
                 ideology = authoritarianism
                 popularity = 0.1

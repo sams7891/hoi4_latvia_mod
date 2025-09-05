@@ -595,6 +595,10 @@ focus_tree = {
             focus = LAT_focus_emergency_2
         }
         completion_reward = { 
+            hidden_effect = {
+                remove_ideas = law_change
+            }
+            add_ideas = civil_rights_minimal
             load_oob = "LAT_focus_emergency_3"
             add_stability = -0.2
             add_popularity = {
@@ -624,7 +628,6 @@ focus_tree = {
             hidden_effect = {
                 remove_ideas = law_change
             }
-            add_ideas = civil_rights_minimal
             add_political_power = 50
             add_popularity = {
                 ideology = authoritarianism

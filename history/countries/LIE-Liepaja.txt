@@ -1,6 +1,7 @@
 capital = 1017
 
-set_research_slots = 3
+set_research_slots = 2
+inherit_technology = LAT
 
 add_political_power = 100
 add_command_power = 25

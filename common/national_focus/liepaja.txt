@@ -28,22 +28,139 @@ focus_tree = {
     }
 
     focus = {
+        id = LIE_focus_more_independence
+        icon = GFX_focus_GER_reorganize_the_wehrmacht
+        cost = 4
+
+        x = 0
+        y = 1
+        relative_position_id = LIE_focus_new_management
+        prerequisite = {
+            focus = LIE_focus_new_management
+        }
+        completion_reward = { 
+            1017 = {
+                set_demilitarized_zone = no
+            }
+        }
+    }
+
+    focus = {
         id = LIE_focus_anti_pirate
         icon = GFX_focus_generic_cruiser2
         cost = 5
 
         prerequisite = {
-            focus = LIE_focus_new_management
+            focus = LIE_focus_more_independence
         }
 
-        relative_position_id = LIE_focus_new_management
-        x = 0
+        relative_position_id = LIE_focus_more_independence
+        x = -1
         y = 1
         completion_reward = { 
             set_technology = {
                 early_submarine = 1
             }
             load_oob = LIE_focus_anti_pirate
+        }
+    }
+
+    focus = {
+        id = LIE_focus_defence
+        icon = GFX_goal_panzerwaffe
+        cost = 5
+
+        prerequisite = {
+            focus = LIE_focus_more_independence
+        }
+
+        relative_position_id = LIE_focus_more_independence
+        x = 1
+        y = 1
+        completion_reward = { 
+            
+            set_technology = {
+                stronghold_network_tech = 1
+                land_fort_tech_1 = 1
+                land_fort_tech_2 = 1
+            }
+            
+            1017 = {
+                add_building_construction = {
+                    type = naval_base
+                    level = 2
+                    instant_build = yes
+                    province = 9262
+                }
+
+                add_building_construction = {
+                    type = stronghold_network
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = LIE_focus_danish_arms
+        icon = GFX_focus_generic_fortify_denmark
+        cost = 2
+
+        relative_position_id = LIE_focus_more_independence
+        x = 3
+        y = 1
+        prerequisite = {
+            focus = LIE_focus_more_independence
+        }
+        completion_reward = { 
+            add_offsite_building = {
+                type = arms_factory
+                level = 2
+            }
+            1017 = {
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = LIE_focus_steal_arms
+        icon = GFX_focus_generic_combined_arms
+        cost = 2
+
+        relative_position_id = LIE_focus_more_independence
+        x = 5
+        y = 1
+        prerequisite = {
+            focus = LIE_focus_more_independence
+        }
+        completion_reward = { 
+            LIE = {
+                add_equipment_to_stockpile = {
+                type = infantry_equipment_0
+                amount = 3000
+                }
+                add_equipment_to_stockpile = {
+                    type = support_equipment
+                    amount = 500
+                }
+            }
+            
+            LAT = {
+                add_equipment_to_stockpile = {
+                type = infantry_equipment_0
+                amount = -3000
+                }
+                add_equipment_to_stockpile = {
+                    type = support_equipment
+                    amount = -500
+                }
+            }
         }
     }
 }

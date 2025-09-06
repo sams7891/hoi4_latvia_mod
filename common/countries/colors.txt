@@ -1124,7 +1124,7 @@ BOZ = {
 	color_ui = rgb { 210 60 100 }
 }
 
-KAL = {
+KAN = {
 	color = rgb { 210 60 200 }
 	color_ui = rgb { 210 60 200 }
 }

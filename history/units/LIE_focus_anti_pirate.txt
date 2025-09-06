@@ -1,0 +1,35 @@
+
+units = {
+    fleet = {
+        name = "Liepājas flote"
+        naval_base = 9262
+        task_force = { 
+            name = "Liepājas zemūdeņu grupa"
+            location = 9262
+            ship = {
+                name = "Ezerkrasts"
+                definition = submarine equipment = {
+                    ship_hull_light_1 = {
+                        amount = 1
+                        owner = LIE
+                        creator = LIE
+                        version_name = "Liepājas klase"
+                    }
+                }
+            
+            }
+            ship = {
+                name = "Lauma"
+                definition = submarine equipment = {
+                    ship_hull_light_1 = {
+                        amount = 1
+                        owner = LIE
+                        creator = LIE
+                        version_name = "Liepājas klase"
+                    }
+                }
+            
+            }
+        }
+    }
+}

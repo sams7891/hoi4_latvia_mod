@@ -1,0 +1,49 @@
+focus_tree = {
+    id = LIE_focus
+    country = { 
+        base = 0
+        modifier = {
+            add = 10
+            tag = LIE
+        }
+    }
+    continuous_focus_position = {
+        x = 100
+        y = 1500
+    }
+
+    focus = {
+        id = LIE_focus_new_management
+        icon = GFX_focus_RAJ_institutional_money_laundering
+        cost = 4
+
+        x = 3
+        y = 0
+        completion_reward = { 
+            add_offsite_building = {
+                type = industrial_complex
+                level = 3
+            }
+        }
+    }
+
+    focus = {
+        id = LIE_focus_anti_pirate
+        icon = GFX_focus_generic_cruiser2
+        cost = 5
+
+        prerequisite = {
+            focus = LIE_focus_new_management
+        }
+
+        relative_position_id = LIE_focus_new_management
+        x = 0
+        y = 1
+        completion_reward = { 
+            set_technology = {
+                early_submarine = 1
+            }
+            load_oob = LIE_focus_anti_pirate
+        }
+    }
+}

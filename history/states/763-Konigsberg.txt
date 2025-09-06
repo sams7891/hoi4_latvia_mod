@@ -6,9 +6,9 @@ state = {
 
 	history = {
 
-		owner = KAL
-		add_core_of = GER
+		owner = KAN
 		add_core_of = SOV
+		add_core_of = KAN
 		
 		victory_points = {
 			6332 10 # Königsberg

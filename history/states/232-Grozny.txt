@@ -11,7 +11,7 @@ state = {
 
 	history = {
 
-		owner = SOV
+		owner = DAG
 
 		buildings = {
 			infrastructure = 2

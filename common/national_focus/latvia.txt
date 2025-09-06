@@ -538,7 +538,7 @@ focus_tree = {
         id = LAT_focus_emergency_1
         icon = GFX_focus_RAJ_red_in_the_shadows
         cost = 1
-        x = 15
+        x = 13
         y = 0
 
         allow_branch = {
@@ -615,7 +615,7 @@ focus_tree = {
     focus = {
         id = LAT_focus_emergency_4
         icon = GFX_SOV_consolidate_power_ccp_2d_sov_compatibility
-        cost = 1
+        cost = 3
 
         relative_position_id = LAT_focus_emergency_3
         x = 0

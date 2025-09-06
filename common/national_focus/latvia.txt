@@ -522,11 +522,13 @@ focus_tree = {
         prerequisite = {
             focus = LAT_focus_karins_anti_corruption_3
         }
-        available = {
-            always = no
+        prerequisite = {
+            focus = LAT_focus_emergency_4
         }
+
         completion_reward = { 
             remove_ideas = economic_restructure
+            country_event = latvia_events.3
         }
     }
 
@@ -624,10 +626,10 @@ focus_tree = {
             focus = LAT_focus_emergency_3
         }
         completion_reward = { 
-            add_ideas = regulated_press
             hidden_effect = {
                 remove_ideas = law_change
             }
+            add_ideas = regulated_press
             add_political_power = 50
             add_popularity = {
                 ideology = authoritarianism

@@ -52,8 +52,19 @@ country_event = {
 
     fire_only_once = yes
 
+    immediate = {
+        190 = {
+            transfer_state_to = KUZ
+        }
+    }
+
     option = {
         name = latvia_events.3.a
-        set_stability = -0.5
+        change_tag_from = LIE
+    }
+
+    option = {
+        name = latvia_events.3.b
+
     }
 }

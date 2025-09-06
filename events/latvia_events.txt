@@ -51,16 +51,32 @@ country_event = {
     is_triggered_only = yes
 
     fire_only_once = yes
-
+    
     immediate = {
-        190 = {
-            transfer_state_to = KUZ
+        hidden_effect = {
+            190 = {
+                transfer_state_to = KUZ
+            }
+            1018 = {
+                transfer_state_to = SEL
+            }
+
+            declare_war_on = {
+                target = LIE
+            }
+            declare_war_on = {
+                target = KUR
+            }
+            declare_war_on = {
+                target = SEL
+            }
         }
+        
     }
 
     option = {
         name = latvia_events.3.a
-        change_tag_from = LIE
+        LIE = { change_tag_from = ROOT }
     }
 
     option = {

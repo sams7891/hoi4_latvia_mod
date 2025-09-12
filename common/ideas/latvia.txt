@@ -90,6 +90,19 @@ ideas = {
             }
         }
 
+        LAT_army_breakdown = {
+            picture = tur_kemalist_army_officers_minimal_power_disloyal
+            allowed = {
+                always = yes
+            }
+
+            modifier = {
+                ground_attack_factor = -0.25
+                supply_consumption_factor = 0.25
+                army_speed_factor = -0.5
+            }
+        }
+
     }
     hidden_ideas = {
         LAT_secret_plot = {

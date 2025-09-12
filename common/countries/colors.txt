@@ -1128,3 +1128,13 @@ KAN = {
 	color = rgb { 210 60 200 }
 	color_ui = rgb { 210 60 200 }
 }
+
+KUZ = {
+	color = rgb { 255 153 153 }
+	color_ui = rgb { 255 153 153 }
+}
+
+SEL = {
+	color = rgb { 153 204 255 }
+	color_ui = rgb { 153 204 255 }
+}

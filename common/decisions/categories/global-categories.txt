@@ -1,0 +1,8 @@
+#debug
+debug_mode = {
+    priority = 100
+    visible = {
+        #remember to change it to always no
+        always = yes
+    }
+}

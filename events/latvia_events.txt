@@ -54,22 +54,97 @@ country_event = {
     
     immediate = {
         hidden_effect = {
+            
+            load_oob = "SEL_civil_war"
+
+            set_autonomy = {
+                target = LIE
+                autonomy_state = autonomy_free
+            }
+            LAT = {
+                add_ideas = LAT_army_breakdown
+            }
+
+            12 = {
+                transfer_state_to = EST
+            }
             190 = {
                 transfer_state_to = KUZ
             }
             1018 = {
                 transfer_state_to = SEL
             }
+            if = {
+                limit = {
+                    NOT = {
+                        has_completed_focus = LAT_focus_liepaja_SEZ_3
+                    }
+                }
+                1017 = {
+                        transfer_state_to = LIE
+                }
+            }
+            LAT = {
+                declare_war_on = {
+                    target = LIE
+                    type = annex_everything
+                }
+                declare_war_on = {
+                    target = KUZ
+                    type = annex_everything
+                }
+                declare_war_on = {
+                    target = SEL
+                    type = annex_everything
+                }
+            }
 
-            declare_war_on = {
-                target = LIE
+            LIE = {
+                declare_war_on = {
+                    target = LAT
+                    type = annex_everything
+                }
+                declare_war_on = {
+                    target = KUZ
+                    type = annex_everything
+                }
+                declare_war_on = {
+                    target = SEL
+                    type = annex_everything
+                }
             }
-            declare_war_on = {
-                target = KUR
+
+            KUZ = {
+                declare_war_on = {
+                    target = LIE
+                    type = annex_everything
+                }
+                declare_war_on = {
+                    target = LAT
+                    type = annex_everything
+                }
+                declare_war_on = {
+                    target = SEL
+                    type = annex_everything
+                }
             }
-            declare_war_on = {
-                target = SEL
+
+            SEL = {
+                declare_war_on = {
+                    target = LIE
+                    type = annex_everything
+                }
+                declare_war_on = {
+                    target = KUZ
+                    type = annex_everything
+                }
+                declare_war_on = {
+                    target = LAT
+                    type = annex_everything
+                }
             }
+
+
         }
         
     }

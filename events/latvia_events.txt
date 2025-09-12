@@ -54,15 +54,12 @@ country_event = {
     
     immediate = {
         hidden_effect = {
-            
-            load_oob = "SEL_civil_war"
 
+            set_global_flag = latvian_civil_war
+            
             set_autonomy = {
                 target = LIE
                 autonomy_state = autonomy_free
-            }
-            LAT = {
-                add_ideas = LAT_army_breakdown
             }
 
             12 = {
@@ -77,14 +74,28 @@ country_event = {
             if = {
                 limit = {
                     NOT = {
-                        has_completed_focus = LAT_focus_liepaja_SEZ_3
+                        has_completed_focus = LAT_focus_liepaja_SEZ_4
                     }
                 }
-                1017 = {
-                        transfer_state_to = LIE
+                LIE = {
+                    transfer_state = 1017
+                    load_oob = "LIE_SEZ"
                 }
             }
+
+            #Latvia
+
             LAT = {
+                add_ideas = LAT_army_breakdown
+                
+                add_state_claim = 190
+                add_state_claim = 1017
+                add_state_claim = 809
+                add_state_claim = 808
+                add_state_claim = 1018
+                add_state_claim = 810
+                add_state_claim = 12
+
                 declare_war_on = {
                     target = LIE
                     type = annex_everything
@@ -98,8 +109,18 @@ country_event = {
                     type = annex_everything
                 }
             }
+
+            #Liepaja
 
             LIE = {
+                add_state_claim = 190
+                add_state_claim = 1017
+                add_state_claim = 809
+                add_state_claim = 808
+                add_state_claim = 1018
+                add_state_claim = 810
+                add_state_claim = 12
+
                 declare_war_on = {
                     target = LAT
                     type = annex_everything
@@ -113,8 +134,21 @@ country_event = {
                     type = annex_everything
                 }
             }
+
+            #Kurzeme
+
+            add_ideas = war_economy
+            add_ideas = service_by_requirement
 
             KUZ = {
+                add_state_claim = 190
+                add_state_claim = 1017
+                add_state_claim = 809
+                add_state_claim = 808
+                add_state_claim = 1018
+                add_state_claim = 810
+                add_state_claim = 12
+
                 declare_war_on = {
                     target = LIE
                     type = annex_everything
@@ -129,7 +163,22 @@ country_event = {
                 }
             }
 
+            #Selija
+            
             SEL = {
+                load_oob = "SEL_civil_war"
+
+                add_ideas = war_economy
+                add_ideas = service_by_requirement
+
+                add_state_claim = 190
+                add_state_claim = 1017
+                add_state_claim = 809
+                add_state_claim = 808
+                add_state_claim = 1018
+                add_state_claim = 810
+                add_state_claim = 12
+
                 declare_war_on = {
                     target = LIE
                     type = annex_everything
@@ -142,8 +191,21 @@ country_event = {
                     target = LAT
                     type = annex_everything
                 }
+
+                diplomatic_relation = {
+                    country = LIT
+                    relation = military_access
+                }
             }
 
+            #Lithuania
+
+            LIT = {
+                diplomatic_relation = {
+                    country = SEL
+                    relation = non_aggression_pact
+                }
+            }
 
         }
         
@@ -156,6 +218,5 @@ country_event = {
 
     option = {
         name = latvia_events.3.b
-
     }
 }

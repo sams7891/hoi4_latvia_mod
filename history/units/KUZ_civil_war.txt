@@ -1,5 +1,5 @@
 division_template = {
-    name = "Sēlijas Kājnieku Pulks"
+    name = "Kurzemes Kājnieku Pulks"
     regiments = { 
         infantry = {
             x = 0
@@ -29,33 +29,41 @@ division_template = {
 
 units = {
     division = {
-        name = "1. Sēlijas Kājnieku Pulks"
-        location = 3255
-        division_template = "Sēlijas Kājnieku Pulks"
+        name = "1. Kurzemes Kājnieku Pulks"
+        location = 3319
+        division_template = "Kurzemes Kājnieku Pulks"
         start_equipment_factor = 1
         start_experience_factor = 0.5
         start_manpower_factor = 1
     }
     division = {
-        name = "2. Sēlijas Kājnieku Pulks"
-        location = 3255
-        division_template = "Sēlijas Kājnieku Pulks"
+        name = "2. Kurzemes Kājnieku Pulks"
+        location = 11246
+        division_template = "Kurzemes Kājnieku Pulks"
         start_equipment_factor = 1
         start_experience_factor = 0.5
         start_manpower_factor = 1
     }
     division = {
-        name = "3. Sēlijas Kājnieku Pulks"
-        location = 11358
-        division_template = "Sēlijas Kājnieku Pulks"
+        name = "3. Kurzemes Kājnieku Pulks"
+        location = 3194
+        division_template = "Kurzemes Kājnieku Pulks"
         start_equipment_factor = 1
         start_experience_factor = 0.5
         start_manpower_factor = 1
     }
     division = {
-        name = "4. Sēlijas Kājnieku Pulks"
-        location = 11358
-        division_template = "Sēlijas Kājnieku Pulks"
+        name = "4. Kurzemes Kājnieku Pulks"
+        location = 6322
+        division_template = "Kurzemes Kājnieku Pulks"
+        start_equipment_factor = 1
+        start_experience_factor = 0.5
+        start_manpower_factor = 1
+    }
+    division = {
+        name = "5. Kurzemes Kājnieku Pulks"
+        location = 3296
+        division_template = "Kurzemes Kājnieku Pulks"
         start_equipment_factor = 1
         start_experience_factor = 0.5
         start_manpower_factor = 1

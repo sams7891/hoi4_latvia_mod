@@ -35,4 +35,32 @@ ideas = {
             }
         }
     }
+
+    country = {
+        plan_defence = {
+            picture = NORDIC_army_democratic
+
+            available = {
+                always = yes
+            }
+
+            modifier = {
+                army_defence_factor = 0.3
+            }
+        }
+    }
+
+    country = {
+        plan_attack = {
+            picture = NORDIC_army_communist
+
+            available = {
+                always = yes
+            }
+
+            modifier = {
+                army_attack_factor = 0.3
+            }
+        }
+    }
 }

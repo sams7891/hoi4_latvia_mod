@@ -139,6 +139,9 @@ focus_tree = {
         prerequisite = {
             focus = LIE_focus_more_independence
         }
+        available = {
+            is_at_peace_exiled_countries_excluded = yes
+        }
         completion_reward = { 
             LIE = {
                 add_equipment_to_stockpile = {
@@ -149,6 +152,7 @@ focus_tree = {
                     type = support_equipment
                     amount = 500
                 }
+                
             }
             
             LAT = {

@@ -1,0 +1,134 @@
+LIE_civil_war = {
+    add_war_economy = {
+        fire_only_once = yes
+
+        days_remove = 10
+
+        available = {
+            NOT = {
+                has_country_flag = in_progress
+            }
+        }
+
+        complete_effect = {
+            set_country_flag = in_progress
+        }
+
+        remove_effect = {
+            add_ideas = war_economy
+
+            clr_country_flag = in_progress
+        }
+    }
+
+    mobilization_law = {
+        fire_only_once = yes
+
+        days_remove = 10
+
+        available = {
+            NOT = {
+                has_country_flag = in_progress
+            }
+        }
+
+        complete_effect = {
+            set_country_flag = in_progress
+        }
+
+        remove_effect = {
+            add_ideas = service_by_requirement
+            
+            clr_country_flag = in_progress
+        }
+    }
+
+    change_trade_law = {
+        fire_only_once = yes
+
+        days_remove = 10
+
+        available = {
+            NOT = {
+                has_country_flag = in_progress
+            }
+        }
+
+        complete_effect = {
+            set_country_flag = in_progress
+        }
+
+        remove_effect = {
+            add_ideas = limited_exports
+            
+            clr_country_flag = in_progress
+        }
+    }
+
+
+
+    plan_defence = {
+        days_remove = 15
+
+        available = {
+            NOT = {
+                has_country_flag = in_progress
+            }
+        }
+
+        complete_effect = {
+            set_country_flag = in_progress
+            add_timed_idea = {
+                idea = plan_defence
+                days = 10
+            }
+        }
+
+        remove_effect = {            
+            clr_country_flag = in_progress
+        }
+    }
+
+    plan_attack = {
+        days_remove = 15
+
+        available = {
+            NOT = {
+                has_country_flag = in_progress
+            }
+        }
+
+        complete_effect = {
+            set_country_flag = in_progress
+            add_timed_idea = {
+                idea = plan_attack
+                days = 10
+            }
+        }
+
+        remove_effect = {            
+            clr_country_flag = in_progress
+        }
+    }
+
+    plan_call_volunteers = {
+        fire_only_once = yes
+
+        days_remove = 15
+
+        available = {
+            NOT = {
+                has_country_flag = in_progress
+            }
+        }
+
+        complete_effect = {
+            set_country_flag = in_progress
+        }
+
+        remove_effect = {            
+            add_manpower = 5000
+            clr_country_flag = in_progress
+        }
+    }
+}

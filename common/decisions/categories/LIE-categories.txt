@@ -1,0 +1,6 @@
+LIE_civil_war = {
+    priority = 10
+    visible = {
+        has_global_flag = latvian_civil_war
+    }
+}

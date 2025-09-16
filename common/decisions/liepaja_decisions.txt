@@ -70,6 +70,10 @@ LIE_civil_war = {
     plan_defence = {
         days_remove = 15
 
+        visible = {
+            has_country_flag = war_cabinet_recruited
+        }
+
         available = {
             NOT = {
                 has_country_flag = in_progress
@@ -92,6 +96,10 @@ LIE_civil_war = {
     plan_attack = {
         days_remove = 15
 
+        visible = {
+            has_country_flag = war_cabinet_recruited
+        }
+
         available = {
             NOT = {
                 has_country_flag = in_progress
@@ -107,6 +115,58 @@ LIE_civil_war = {
         }
 
         remove_effect = {            
+            clr_country_flag = in_progress
+        }
+    }
+
+    plan_grand_attack = {
+        fire_only_once = yes
+        days_remove = 5
+        
+        visible = {
+            has_country_flag = grand_plan_available
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = in_progress
+            }
+        }
+
+        complete_effect = {
+            set_country_flag = in_progress
+            add_timed_idea = {
+                idea = grand_attack
+                days = 14
+            }
+        }
+
+        remove_effect = {
+            clr_country_flag = in_progress
+        }
+    }
+
+    plan_LVT = {
+        days_remove = 10
+
+        fire_only_once = yes
+
+        visible = {
+            has_country_flag = LVT_recruited
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = in_progress
+            }
+        }
+
+        complete_effect = {
+            set_country_flag = in_progress
+        }
+
+        remove_effect = {            
+            add_ideas = LIE_LVT_war_educaation
             clr_country_flag = in_progress
         }
     }

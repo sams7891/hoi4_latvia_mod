@@ -19,4 +19,25 @@ debug_mode = {
             add_manpower = 1000000
         }
     }
+
+    war_bonuses = {
+        complete_effect = {
+            add_ideas = army_debug
+        }
+    }
+
+    launch_civil_war = {
+        complete_effect = {
+            country_event = latvia_events.3
+        }
+    }
+
+    load_liepaja_civil_war_focus_tree = {
+        complete_effect = {
+            LIE = {
+                load_focus_tree = LIE_focus_civil_war
+                mark_focus_tree_layout_dirty = yes
+            }
+        }
+    }
 }

@@ -1138,3 +1138,8 @@ SEL = {
 	color = rgb { 153 204 255 }
 	color_ui = rgb { 153 204 255 }
 }
+
+BRR = {
+	color = rgb { 42 92 46 }
+	color_ui = rgb { 42 92 46 }
+}

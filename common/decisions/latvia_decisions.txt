@@ -127,6 +127,7 @@ rail_latvia = {
 }
 
 anti_corruption = {
+
     anti_corruption_banks = {
         cost = 15
         fire_only_once = yes

@@ -1,6 +1,7 @@
 rail_baltic = {
     priority = 9
     visible = {
+        tag = LAT
         has_completed_focus = LAT_focus_rail_baltic_2.2
     }
 }
@@ -8,6 +9,7 @@ rail_baltic = {
 rail_latvia = {
     priority = 9
     visible = {
+        tag = LAT
         has_completed_focus = LAT_focus_rail_latvia
     }
 }
@@ -15,6 +17,7 @@ rail_latvia = {
 anti_corruption = {
     priority = 10
     visible = {
+        tag = LAT
         has_completed_focus = LAT_focus_karins_anti_corruption_1
     }
 }

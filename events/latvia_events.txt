@@ -43,6 +43,7 @@ country_event = {
     }
 }
 
+#civil war starts
 country_event = {
     id = latvia_events.3
     title = latvia_events.3.t
@@ -61,6 +62,8 @@ country_event = {
                 target = LIE
                 autonomy_state = autonomy_free
             }
+            
+            
 
             12 = {
                 transfer_state_to = EST
@@ -71,6 +74,16 @@ country_event = {
             1018 = {
                 transfer_state_to = SEL
             }
+
+            LIE = {
+                set_province_controller = 3319
+            }
+
+            SEL = {
+                set_province_controller = 310
+                set_province_controller = 6459
+            }
+            
             if = {
                 limit = {
                     NOT = {
@@ -83,10 +96,22 @@ country_event = {
                 }
             }
 
+            if = {
+                limit = {
+                    LAT = {
+                        has_completed_focus = LAT_focus_ban_russian_in_work
+                    }
+                }
+
+                #If banned russian in work add the country BRR Baltic Russian Republic in the civil war
+            }
+
+
             #Latvia
 
             LAT = {
                 add_ideas = LAT_army_breakdown
+                remove_ideas = LAT_gunars_ansins
                 
                 add_state_claim = 190
                 add_state_claim = 1017
@@ -113,6 +138,15 @@ country_event = {
             #Liepaja
 
             LIE = {
+
+                set_technology = {
+                    infantry_weapons1 = 1
+                    fighter1 = 1
+                }
+
+                mark_focus_tree_layout_dirty = yes
+                load_focus_tree = LIE_focus_civil_war
+
                 add_state_claim = 190
                 add_state_claim = 1017
                 add_state_claim = 809
@@ -141,6 +175,8 @@ country_event = {
             add_ideas = service_by_requirement
 
             KUZ = {
+                load_oob = "KUZ_civil_war"
+
                 add_state_claim = 190
                 add_state_claim = 1017
                 add_state_claim = 809

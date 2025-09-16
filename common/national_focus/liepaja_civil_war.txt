@@ -1,0 +1,178 @@
+focus_tree = {
+    id = LIE_focus_civil_war
+    country = { 
+        base = 0
+        modifier = {
+            add = 10
+            tag = LIE
+        }
+    }
+    continuous_focus_position = {
+        x = 100
+        y = 1500
+    }
+
+    focus = {
+        id = LIE_rally
+        icon = GFX_focus_AFG_against_kabul
+        cost = 0.5
+        x = 5
+        y = 0
+        completion_reward = {
+            add_stability = 0.1
+            add_war_support = 0.1
+        }
+    }
+
+    focus = {
+        id = LIE_recruit_war_cabinet
+        icon = GFX_focus_AUS_lawmaking_leniency
+        cost = 2
+
+        relative_position_id = LIE_rally
+        x = 0
+        y = 1
+
+        prerequisite = {
+            focus = LIE_rally
+        }
+        completion_reward = { 
+            # add characters for military advisors and a general and a field marshal via event and add a flag to unlock civil war decisions
+            set_country_flag = war_cabinet_recruited
+        }
+    }
+
+    focus = {
+        id = LIE_german_help
+        icon = GFX_focus_GER_army
+        cost = 3
+
+        relative_position_id = LIE_recruit_war_cabinet
+        x = -1
+        y = 1
+
+        prerequisite = {
+            focus = LIE_recruit_war_cabinet
+        }
+        completion_reward = { 
+            
+            GER = {
+                send_equipment = {
+                    amount = 3000
+                    target = LIE
+                    type = infantry_equipment_2
+                }
+                send_equipment = {
+                    amount = 300
+                    target = LIE
+                    type = support_equipment
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = LIE_danish_help
+        icon = GFX_focus_DEN_undermine_overlord_continuous_focus
+        cost = 3
+
+        relative_position_id = LIE_recruit_war_cabinet
+        x = 1
+        y = 1
+
+        prerequisite = {
+            focus = LIE_recruit_war_cabinet
+        }
+
+        available = {
+            LAT = {
+                has_completed_focus = LAT_focus_liepaja_SEZ_2
+            }
+            
+        }
+        completion_reward = { 
+            1017 = {
+                add_building_construction = {
+                    type = air_base
+                    level = 2
+                }
+            }
+            add_equipment_to_stockpile = {
+                type = CAS_equipment_1
+                producer = DEN
+                amount = 30
+            }
+        }
+    }
+
+    focus = {
+        id = LIE_LVT
+        icon = GFX_focus_research
+        cost = 3
+
+        relative_position_id = LIE_recruit_war_cabinet
+        x = 3
+        y = 1
+
+        prerequisite = {
+            focus = LIE_recruit_war_cabinet
+        }
+        completion_reward = { 
+            add_research_slot = 1
+        }
+    }
+    # Make available the special paths
+    focus = {
+        id = LIE_LVT_war
+        icon = GFX_focus_NORDIC_com_research
+        cost = 2
+
+        relative_position_id = LIE_LVT
+        x = 0
+        y = 1
+
+        prerequisite = {
+            focus = LIE_LVT
+        }
+        completion_reward = { 
+            add_manpower = 250
+            set_country_flag = LVT_recruited
+        }
+    }
+
+    focus = {
+        id = LIE_prisoner_batalions
+        icon = GFX_focus_generic_conspiracy
+        cost = 3
+
+        relative_position_id = LIE_recruit_war_cabinet
+        x = 5
+        y = 1
+
+        prerequisite = {
+            focus = LIE_recruit_war_cabinet
+        }
+        completion_reward = { 
+            add_stability = -0.15
+            load_oob = "LIE_convict_batalion"
+        }
+    }
+
+    focus = {
+        id = LIE_grand_plan
+        icon = GFX_focus_SWE_varnplikt
+        cost = 4
+
+        relative_position_id = LIE_german_help
+        x = 1
+        y = 1
+
+        prerequisite = {
+            focus = LIE_danish_help
+            focus = LIE_german_help
+        }
+        completion_reward = { 
+            set_country_flag = grand_plan_available
+        }
+    }
+}

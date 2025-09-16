@@ -51,6 +51,23 @@ ideas = {
     }
 
     country = {
+
+        army_debug = {
+            picture = danieli
+
+            available = {
+                always = yes
+            }
+
+            modifier = {
+                army_attack_factor = 100
+                army_defence_factor = 100
+                breakthrough_factor = 100
+                supply_consumption_factor = -100
+                army_speed_factor = 1
+            }
+        }
+
         plan_attack = {
             picture = NORDIC_army_communist
 
@@ -62,5 +79,23 @@ ideas = {
                 army_attack_factor = 0.3
             }
         }
+
+        grand_attack = {
+            picture = PER_stand_with_giants_modifier
+
+            available = {
+                always = yes
+            }
+
+            modifier = {
+                army_attack_factor = 0.5
+                breakthrough_factor = 0.5
+                supply_consumption_factor = -1
+            }
+        }
     }
+
+
+
+    
 }

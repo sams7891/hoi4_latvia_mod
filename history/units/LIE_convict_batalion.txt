@@ -1,0 +1,44 @@
+division_template = {
+    name = "Cietumnieku bataljons"
+    is_locked = yes
+    regiments = { 
+        penal_battalion = {
+            x = 0
+            y = 0
+        }
+
+        penal_battalion = {
+            x = 0
+            y = 1
+        }
+
+        penal_battalion = {
+            x = 1
+            y = 0
+        }
+
+        penal_battalion = {
+            x = 1
+            y = 1
+        }
+    }
+}
+
+units = {
+    division = {
+        name = "1. Liepājas cietumnieku bataljons"
+        location = 9262
+        division_template = "Cietumnieku bataljons"
+        start_equipment_factor = 1
+        start_experience_factor = 0.5
+        start_manpower_factor = 1
+    }
+    division = {
+        name = "2. Liepājas cietumnieku bataljons"
+        location = 9262
+        division_template = "Cietumnieku bataljons"
+        start_equipment_factor = 1
+        start_experience_factor = 0.5
+        start_manpower_factor = 1
+    }
+}

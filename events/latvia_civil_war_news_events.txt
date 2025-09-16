@@ -1,0 +1,16 @@
+add_namespace = civil_war
+
+news_event = {
+    id = civil_war.1
+    title = civil_war.t
+    desc = civil_war.d
+
+    is_triggered_only = yes
+
+    trigger = {
+        owner = {
+            tag = LIE
+            controls_province = 9340
+        }
+    }
+}

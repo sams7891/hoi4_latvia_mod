@@ -97,11 +97,7 @@ focus_tree = {
                     level = 2
                 }
             }
-            add_equipment_to_stockpile = {
-                type = CAS_equipment_1
-                producer = DEN
-                amount = 30
-            }
+            # add that when done add 30 CAS and 30 fighters
         }
     }
 

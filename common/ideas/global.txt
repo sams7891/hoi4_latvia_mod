@@ -93,6 +93,17 @@ ideas = {
                 supply_consumption_factor = -1
             }
         }
+
+        civil_war_idea = {
+            available = {
+                always = yes
+            }
+
+            modifier = {
+                forced_surrender_limit = 1
+                army_speed_factor = -0.25
+            }
+        }
     }
 
 

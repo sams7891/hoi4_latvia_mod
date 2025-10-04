@@ -1,0 +1,18 @@
+LIT_intervine_in_LAT_civil_war = {
+    enable = {
+        has_global_flag = latvian_civil_war
+    }
+    allowed = {
+        tag = LIT
+    }
+    ai_strategy = {
+        type = send_lend_lease_desire
+        id = SEL
+        value = 100
+    }
+    ai_strategy = {
+        type = send_volunteers_desire
+        id = SEL
+        value = 100
+    }
+}

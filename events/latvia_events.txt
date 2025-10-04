@@ -55,7 +55,7 @@ country_event = {
     
     immediate = {
         hidden_effect = {
-
+            
             set_global_flag = latvian_civil_war
             
             set_autonomy = {
@@ -104,6 +104,12 @@ country_event = {
                 }
 
                 #If banned russian in work add the country BRR Baltic Russian Republic in the civil war
+                # **Updated** Now the Baltic Occupation Zone will annex 810
+
+                810 = {
+                    transfer_state_to = BOZ
+                }
+                
             }
 
 

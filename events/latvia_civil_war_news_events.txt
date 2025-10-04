@@ -2,15 +2,24 @@ add_namespace = civil_war
 
 news_event = {
     id = civil_war.1
-    title = civil_war.t
-    desc = civil_war.d
+    title = civil_war.1.t
+    desc = civil_war.1.d
 
     is_triggered_only = yes
 
-    trigger = {
-        owner = {
-            tag = LIE
-            controls_province = 9340
-        }
+    option = {
+        name = civil_war.1.a
+    }
+}
+
+news_event = {
+    id = civil_war.2
+    title = civil_war.2.t
+    desc = civil_war.2.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = civil_war.2.a
     }
 }

@@ -104,6 +104,19 @@ ideas = {
                 army_speed_factor = -0.25
             }
         }
+
+        volunteer_sender = {
+            picture = ast_volunteer_defence_corps
+
+            available = {
+                always = yes
+            }
+
+            modifier = {
+                send_volunteer_divisions_required = -2
+                send_volunteers_tension = 0
+            }
+        }
     }
 
 

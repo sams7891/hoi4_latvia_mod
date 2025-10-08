@@ -1,0 +1,7 @@
+SEL_civil_War = {
+    priority = 10
+    visible = {
+        has_global_flag = latvian_civil_war
+        tag = SEL
+    }
+}

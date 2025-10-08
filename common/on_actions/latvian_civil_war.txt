@@ -1,0 +1,48 @@
+on_actions = {
+    #Riga fallen on_action
+    on_daily = {
+        effect = {
+            if = {
+                limit = {
+                    has_global_flag = latvian_civil_war
+                    NOT = {
+                        LAT = {
+                            controls_province = 9340
+                        }
+                        has_country_flag = riga_fallen
+                    }
+                    
+                }
+                set_country_flag = riga_fallen
+                THIS = {
+                    if = {
+                        limit = { 
+                            controls_province = 9340
+                        }
+                        country_event = civil_war_e.1
+                    }
+                }
+                news_event = civil_war.1
+            }
+        }
+    }
+
+    #Civil war ends
+    on_daily = {
+    effect = {
+        if = {
+            limit = {
+                has_global_flag = latvian_civil_war
+                OR = {
+                    tag = LAT
+                    tag = LIE
+                    tag = KUZ
+                    tag = SEL
+                }
+                has_war = no
+            }
+            news_event = { id = civil_war.2 }
+        }
+    }
+}
+}

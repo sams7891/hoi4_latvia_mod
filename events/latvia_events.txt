@@ -261,4 +261,13 @@ country_event = {
     option = {
         name = latvia_events.3.b
     }
+
+    option = {
+        name = latvia_events.3.c
+        SEL = { change_tag_from = ROOT }
+    }
+    option = {
+        name = latvia_events.3.c
+        KUZ = { change_tag_from = ROOT }
+    }
 }

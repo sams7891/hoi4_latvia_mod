@@ -1,0 +1,18 @@
+add_namespace = civil_war_e
+
+country_event = {
+    #Event for the  country that controls riga
+    id = civil_war_e.1
+    title = civil_war_e.1.t
+    desc = civil_war_e.1.d
+
+    is_triggered_only = yes
+
+    option = {
+        #currently not used
+        name = civil_war_e.1.a
+        add_stability = 0.3
+        add_war_support = 0.4
+        add_manpower = 25000
+    }
+}

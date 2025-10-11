@@ -27,6 +27,7 @@ oob = "LAT_1939"
 
 
 set_technology = {	
+	tech_support = 1
 	tech_engineers = 1
 	interwar_artillery = 1
 	interwar_antiair = 1
@@ -73,10 +74,10 @@ set_politics = {
 }
 set_popularities = {
 	democratic = 70
-	fascism = 15
+	fascism = 5
 	communism = 5
 	neutrality = 5
-	authoritarianism = 5
+	authoritarianism = 15
 }
 set_party_name = {
 	ideology = democratic

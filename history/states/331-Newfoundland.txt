@@ -7,7 +7,7 @@ state = {
 
 	history = {
 
-		owner = ENG
+		owner = CAN
 		add_core_of = CAN
 
 		buildings = {

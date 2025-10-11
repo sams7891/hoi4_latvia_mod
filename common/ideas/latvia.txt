@@ -47,7 +47,7 @@ ideas = {
 
             modifier = {
                 political_power_factor = 0.5
-                consumer_goods = -0.25
+                consumer_goods_factor = -0.25
                 cic_construction_boost = 0.1
             }
         }

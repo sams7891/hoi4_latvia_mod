@@ -1,0 +1,22 @@
+focus_tree = {
+    id = LIE_after_civil_war
+    country = { 
+        base = 10
+        modifier = {
+            tag = LIE
+            add = 10
+        }
+    }
+
+    focus = {
+        id = LIE_reconstruction
+        icon = GFX_focus_GER_customs_union
+        cost = 1
+        x = 8
+        y = 0
+
+        completion_reward = { 
+            
+        }
+    }
+}

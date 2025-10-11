@@ -118,6 +118,7 @@ country_event = {
             LAT = {
                 add_ideas = LAT_army_breakdown
                 remove_ideas = LAT_gunars_ansins
+                remove_ideas = LAT_liepaja_SEZ
                 
                 add_state_claim = 190
                 add_state_claim = 1017
@@ -270,4 +271,50 @@ country_event = {
         name = latvia_events.3.c
         KUZ = { change_tag_from = ROOT }
     }
+}
+
+add_namespace = latvia_terror_attack
+
+country_event = {
+    #Riga bombing
+    id = latvia_terror_attack.1
+    title = latvia_terror_attack.1.t
+    desc = latvia_terror_attack.1.d
+    picture = GFX_report_event_NOR_Nasjonal_samling_rally
+
+    is_triggered_only = yes
+
+    option = {
+        name = latvia_terror_attack.1.a
+        add_stability = -0.1
+        808 = {
+            damage_building = {
+                type = infrastructure
+                damage = 2
+            }
+        }
+    }
+
+}
+
+country_event = {
+    #Liepaja bombing
+    id = latvia_terror_attack.2
+    title = latvia_terror_attack.2.t
+    desc = latvia_terror_attack.2.d
+    picture = GFX_report_event_NOR_Nasjonal_samling_rally
+
+    is_triggered_only = yes
+
+    option = {
+        name = latvia_terror_attack.2.a
+        add_stability = -0.1
+        1017 = {
+            damage_building = {
+                type = infrastructure
+                damage = 1
+            }
+        }
+    }
+
 }

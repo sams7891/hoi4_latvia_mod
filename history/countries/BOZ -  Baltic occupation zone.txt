@@ -40,16 +40,13 @@ complete_special_project = {
 }
 
 set_politics = {
-	ruling_party = democratic
-	last_election = "2022.9.1"
-	election_frequency = 26
-	elections_allowed = yes
+	ruling_party = authoritarianism
+	elections_allowed = no
 }
 
 set_popularities = {
-	democratic = 70
-	fascism = 15
+	authoritarianism = 90
+	fascism = 3
 	communism = 5
-	neutrality = 5
-	authoritarianism = 5
+	democratic = 2
 }

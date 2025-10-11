@@ -599,6 +599,10 @@ focus_tree = {
         completion_reward = { 
             hidden_effect = {
                 remove_ideas = law_change
+                remove_ideas = civil_rights_no
+                remove_ideas = civil_rights_minimal
+                remove_ideas = civil_rights_medium
+                remove_ideas = civil_rights_full
             }
             add_ideas = civil_rights_minimal
             load_oob = "LAT_focus_emergency_3"
@@ -627,6 +631,10 @@ focus_tree = {
         }
         completion_reward = { 
             hidden_effect = {
+                remove_ideas = free_press
+                remove_ideas = lightly_regulated_press
+                remove_ideas = regulated_press
+                remove_ideas = total_press_control
                 remove_ideas = law_change
             }
             add_ideas = regulated_press

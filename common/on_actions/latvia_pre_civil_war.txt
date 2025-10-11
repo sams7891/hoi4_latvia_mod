@@ -1,0 +1,18 @@
+on_actions = {
+    on_weekly_LAT = {
+        effect = {
+            if = {
+                limit = {
+                    has_country_flag = assasination_attempt_survived
+                    NOT = {
+                        has_global_flag = latvian_civil_war
+                    }    
+                }
+                random_list = {
+                    50 = { country_event = latvia_terror_attack.1 }
+                    50 = { country_event = latvia_terror_attack.2 }
+                }
+            }
+        }
+    }
+}

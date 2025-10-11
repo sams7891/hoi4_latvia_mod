@@ -15,4 +15,9 @@ LIT_intervine_in_LAT_civil_war = {
         id = SEL
         value = 100
     }
+    abort = {
+        NOT = {
+            has_global_flag = latvian_civil_war
+        }
+    }
 }
